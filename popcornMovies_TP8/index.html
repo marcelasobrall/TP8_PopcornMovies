@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <style>
+      /* Estilos para o tema claro */
+      .light-theme {
+        background-color: #fff;
+        color: #000;
+      }
+
+      /* Estilos para o tema escuro */
+      .dark-theme {
+        background-color: #333;
+        color: #fff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button id="theme-toggle">Alternar Tema</button>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', function() {
+      body.classList.toggle('light-theme');
+      body.classList.toggle('dark-theme');
+    });
+
+</script>
